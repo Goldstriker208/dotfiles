@@ -50,6 +50,11 @@ color: #FF0000;
 padding-top: 0;
 }
 
+#pulseaudio.bluetooth {
+color: #2aacdb;
+padding-top: 0;
+}
+
 #battery {
 padding: 0 0px;
 transition: all .3s ease;
@@ -153,11 +158,16 @@ transition: all .3s ease;
 color: @color7;
 }
 
+#bluetooth.connected {
+color: #2aacdb;
+}
+
 #network {
 padding: 0px 5px;
 transition: all .3s ease;
-color: @color7;
+color: #db2a97; /*@color7*/
 }
+
 
 #group-expand {
 padding: 0px 5px;

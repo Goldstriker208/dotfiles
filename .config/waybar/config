@@ -48,7 +48,7 @@
 
 "custom/clipboard":{
   "format":" ",
-  "on-click": "cliphist list | rofi -dmenu | cliphist decode | wl-copy",
+  "on-click": "~/.config/waybar/scripts/rofi-clipboard",
   "interval":86400
 },
 

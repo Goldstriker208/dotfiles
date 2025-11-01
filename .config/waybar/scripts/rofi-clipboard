@@ -1,0 +1,19 @@
+#!/usr/bin/env bash
+# 🌸 Rofi Clipboard History for Hyprland 🌸
+# Uses cliphist + wl-copy/wl-paste
+# Theme: Pink & Blue Hyprland-Inspired
+
+HIST=$(cliphist list | rofi -dmenu \
+    -theme ~/.config/rofi/pinkblue-apps.rasi \
+    -p "📋 Clipboard History" \
+    -matching fuzzy \
+    -no-fixed-num-lines \
+    -lines 10)
+
+# Exit if nothing selected
+[[ -z "$HIST" ]] && exit 0
+
+# Copy selected entry back to clipboard
+cliphist decode <<< "$HIST" | wl-copy
+notify-send "📋 Copied to clipboard!" "$(cliphist decode <<< "$HIST" | head -c 80)"
+

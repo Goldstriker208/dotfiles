@@ -1,0 +1,74 @@
+/* Pink & Blue Hyprland-inspired Rofi theme — top-left version */
+
+configuration {
+    modi: "drun,run";
+    font: "JetBrainsMono Nerd Font 12";
+    display-drun: " ";
+    show-icons: true;
+}
+
+* {
+    background-color: transparent;
+    text-color: #ffffff;
+    border: 0;
+    padding: 4px;
+    spacing: 2px;
+}
+
+window {
+    width: 180px;
+    height: 210px;
+    border-radius: 16px;
+    border: 2;
+    border-color: #ffb6c1; /* pastel pink border */
+    background-color: rgba(60, 80, 150, 0.8); /* soft blue-gray background */
+    location: northwest;  /* 👈 top-left corner */
+    anchor: northwest;    /* ensures it sticks to the top-left edge */
+    x-offset: 5;         /* small gap from the left */
+    y-offset: 5;         /* pushes it slightly down below Waybar */
+}
+
+mainbox {
+    background-color: transparent;
+    children: [listview];
+}
+
+listview {
+    background-color: transparent;
+    spacing: 4px;
+    scrollbar: false;
+}
+
+element {
+    padding: 6px 10px;
+    border-radius: 8px;
+    background-color: rgba(255, 182, 193, 0.25); /* faint pink */
+    color: #ffffff;
+}
+
+element selected.normal {
+    background-color: rgba(255, 182, 193, 0.8); /* brighter pink highlight */
+    color: #1a1a1a;
+}
+
+element alternate.normal {
+    background-color: rgba(173, 216, 230, 0.4); /* soft blue alt rows */
+    color: #ffffff;
+}
+
+element urgent.normal {
+    background-color: rgba(255, 99, 132, 0.9);
+    color: #ffffff;
+}
+
+textbox-prompt-colon {
+    enabled: false;
+}
+
+entry {
+    enabled: false;
+}
+
+message {
+    enabled: false;
+}

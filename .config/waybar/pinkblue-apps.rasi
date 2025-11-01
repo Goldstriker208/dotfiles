@@ -1,0 +1,79 @@
+/* 🌸 Pink & Blue Hyprland-Inspired Rofi Theme — Centered App Launcher */
+
+
+
+configuration {
+    modi: "drun,run,calc";
+    font: "JetBrainsMono Nerd Font 12";
+    display-drun: "🔎";
+    show-icons: true;
+}
+
+* {
+    background-color: transparent;
+    text-color: #ffffff;
+    border: 0;
+    padding: 4px;
+    spacing: 2px;
+}
+
+window {
+    width: 600px;                           /* wider window */
+    height: 400px;
+    border-radius: 16px;
+    border: 2;
+    border-color: #ffb6c1;                  /* pastel pink border */
+    background-color: rgba(60, 80, 150, 0.8); /* soft blue-gray background */
+    location: center;                       /* center window */
+    anchor: center;
+}
+
+mainbox {
+    background-color: transparent;
+    children: [inputbar, listview];         /* include search bar */
+    spacing: 10px;
+    padding: 10px;
+}
+
+inputbar {
+    background-color: rgba(255, 182, 193, 0.2); /* faint pink background */
+    border-radius: 10px;
+    padding: 8px 12px;
+    text-color: #ffffff;
+}
+
+entry {
+    placeholder: "Search for an app...";
+    expand: true;
+    text-color: #ffffff;
+    background-color: transparent;
+    cursor: text;
+}
+
+listview {
+    background-color: transparent;
+    spacing: 6px;
+    scrollbar: false;
+}
+
+element {
+    padding: 8px 12px;
+    border-radius: 10px;
+    background-color: rgba(255, 182, 193, 0.25);
+    color: #ffffff;
+}
+
+element selected.normal {
+    background-color: rgba(255, 182, 193, 0.85); /* bright pink highlight */
+    color: #1a1a1a;
+}
+
+element alternate.normal {
+    background-color: rgba(173, 216, 230, 0.35); /* soft blue alt rows */
+    color: #ffffff;
+}
+
+element urgent.normal {
+    background-color: rgba(255, 99, 132, 0.9);
+    color: #ffffff;
+}
